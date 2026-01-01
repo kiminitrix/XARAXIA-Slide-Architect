@@ -1,0 +1,7 @@
+{
+  "name": "XARAXIA Slide Architect",
+  "description": "Convert multi-format documents and raw text into professional, structured slide decks using AI-driven visual hierarchy.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
