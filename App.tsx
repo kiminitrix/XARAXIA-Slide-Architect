@@ -67,29 +67,31 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-50 dark:bg-slate-950 transition-colors duration-300">
       {/* Header */}
-      <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 transition-colors">
+      <header className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-50 transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-2xl shadow-lg">X</div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900 dark:text-white">XARAXIA</h1>
-              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-widest uppercase">Slide Architect</p>
+              <h1 className="text-xl font-bold text-slate-900 dark:text-white transition-colors duration-300">XARAXIA</h1>
+              <p className="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-widest uppercase transition-colors duration-300">Slide Architect</p>
             </div>
           </div>
-          
           <div className="flex items-center gap-4">
             <button 
               onClick={toggleDarkMode}
-              className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors"
+              className="p-2 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-600 dark:text-slate-300 transition-colors duration-300"
               aria-label="Toggle Dark Mode"
             >
               {isDarkMode ? (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.243 17.657l.707.707M7.757 7.757l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z"></path></svg>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364-6.364l-.707.707M6.343 17.657l-.707.707M16.243 17.657l.707.707M7.757 7.757l.707-.707M12 5a7 7 0 100 14 7 7 0 000-14z"></path>
+                </svg>
               ) : (
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path></svg>
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+                </svg>
               )}
             </button>
-
             {deck && (
               <div className="flex gap-4">
                 <Button variant="outline" onClick={() => window.print()}>Export PDF</Button>
@@ -104,14 +106,14 @@ export default function App() {
         {!deck ? (
           <div className="max-w-3xl mx-auto space-y-8 animate-in fade-in slide-in-from-bottom-4 duration-700">
             <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">Turn raw data into professional decks</h2>
-              <p className="text-lg text-slate-600 dark:text-slate-400">Upload a document, paste text, or provide an image. Our AI handles the structure, visuals, and flow.</p>
+              <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4 transition-colors duration-300">Turn raw data into professional decks</h2>
+              <p className="text-lg text-slate-600 dark:text-slate-400 transition-colors duration-300">Upload a document, paste text, or provide an image. Our AI handles the structure, visuals, and flow.</p>
             </div>
 
-            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors">
+            <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors duration-300">
               <div className="p-8 space-y-6">
                 <div>
-                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wider">Input Content</label>
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-2 uppercase tracking-wider transition-colors duration-300">Input Content</label>
                   <textarea
                     className="w-full h-64 p-4 rounded-xl border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition-all text-slate-800 dark:text-slate-200 placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none"
                     placeholder="Paste your report, meeting notes, or article here..."
@@ -121,13 +123,13 @@ export default function App() {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="flex-grow h-px bg-slate-100 dark:bg-slate-800"></div>
+                  <div className="flex-grow h-px bg-slate-100 dark:bg-slate-800 transition-colors duration-300"></div>
                   <span className="text-xs font-bold text-slate-400 dark:text-slate-600 uppercase tracking-widest">OR</span>
-                  <div className="flex-grow h-px bg-slate-100 dark:bg-slate-800"></div>
+                  <div className="flex-grow h-px bg-slate-100 dark:bg-slate-800 transition-colors duration-300"></div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 uppercase tracking-wider">Attach Resource (Image/PDF)</label>
+                  <label className="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-3 uppercase tracking-wider transition-colors duration-300">Attach Resource (Image/PDF)</label>
                   <input
                     type="file"
                     ref={fileInputRef}
@@ -156,7 +158,7 @@ export default function App() {
                 </div>
               </div>
 
-              <div className="bg-slate-50 dark:bg-slate-800/50 px-8 py-6 flex flex-col items-center transition-colors">
+              <div className="bg-slate-50 dark:bg-slate-800 px-8 py-6 flex flex-col items-center transition-colors duration-300">
                 <Button 
                   onClick={handleProcess} 
                   isLoading={status.loading}
@@ -166,7 +168,7 @@ export default function App() {
                   {status.loading ? status.step : 'Architect Slide Deck'}
                 </Button>
                 {status.error && (
-                  <p className="mt-4 text-red-500 text-sm font-medium">Error: {status.error}</p>
+                  <p className="mt-4 text-red-500 dark:text-red-400 text-sm font-medium">Error: {status.error}</p>
                 )}
               </div>
             </div>
@@ -182,14 +184,14 @@ export default function App() {
                   onClick={() => setCurrentSlideIndex(i)}
                   className={`w-full text-left p-4 rounded-xl border transition-all duration-200 group relative ${
                     currentSlideIndex === i 
-                    ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900/30 shadow-md ring-2 ring-indigo-500/20' 
+                    ? 'border-indigo-500 bg-indigo-50 dark:bg-indigo-900 shadow-md ring-2 ring-indigo-500/20' 
                     : 'border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:border-slate-300 dark:hover:border-slate-700'
                   }`}
                 >
                   <div className="flex gap-3">
                     <span className="text-xs font-mono font-bold text-slate-400 dark:text-slate-600">{i + 1}</span>
                     <div className="flex-grow min-w-0">
-                      <p className={`text-sm font-bold truncate ${currentSlideIndex === i ? 'text-indigo-900 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>
+                      <p className={`text-sm font-bold truncate ${currentSlideIndex === i ? 'text-indigo-900 dark:text-indigo-200' : 'text-slate-700 dark:text-slate-300'}`}>
                         {s.slide_title}
                       </p>
                       <p className="text-[10px] text-slate-400 dark:text-slate-500 mt-1 uppercase font-semibold">{s.layout_type}</p>
@@ -203,11 +205,11 @@ export default function App() {
             <div className="lg:col-span-9 space-y-8">
               <div className="flex items-center justify-between no-print">
                 <div>
-                  <h2 className="text-3xl font-bold text-slate-900 dark:text-white">{deck.title}</h2>
+                  <h2 className="text-3xl font-bold text-slate-900 dark:text-white transition-colors duration-300">{deck.title}</h2>
                   <div className="flex items-center gap-4 mt-2">
-                    <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-bold uppercase">{deck.theme} Theme</span>
+                    <span className="px-3 py-1 bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300 rounded-full text-xs font-bold uppercase transition-colors duration-300">{deck.theme} Theme</span>
                     <span className="text-sm text-slate-400 dark:text-slate-600">|</span>
-                    <span className="text-sm text-slate-500 dark:text-slate-400 font-medium">{deck.slides.length} Professional Slides</span>
+                    <span className="text-sm text-slate-500 dark:text-slate-400 font-medium transition-colors duration-300">{deck.slides.length} Professional Slides</span>
                   </div>
                 </div>
                 <div className="flex gap-2">
@@ -228,8 +230,8 @@ export default function App() {
                 </div>
               </div>
 
-              {/* Live Preview */}
-              <div className="no-print bg-slate-200 dark:bg-slate-800 p-1 rounded-2xl shadow-inner transition-colors">
+              {/* Live Preview Container */}
+              <div className="no-print bg-slate-200 dark:bg-slate-800 p-1 rounded-2xl transition-colors duration-300">
                 <SlidePreview 
                   slide={deck.slides[currentSlideIndex]} 
                   theme={deck.theme} 
@@ -238,7 +240,7 @@ export default function App() {
               </div>
 
               {/* Presenter Notes Panel */}
-              <div className="bg-slate-900 dark:bg-black text-white rounded-2xl p-8 shadow-2xl no-print relative overflow-hidden border border-slate-800">
+              <div className="bg-slate-900 dark:bg-black text-white rounded-2xl p-8 shadow-2xl no-print relative overflow-hidden border border-slate-800 dark:border-slate-900 transition-colors duration-300">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-indigo-500/10 rounded-full -mr-16 -mt-16 blur-3xl"></div>
                 <div className="relative">
                   <h4 className="text-xs font-bold text-indigo-400 uppercase tracking-widest mb-4">Presenter Notes</h4>
@@ -265,14 +267,14 @@ export default function App() {
 
       {/* Footer */}
       {!deck && (
-        <footer className="py-12 border-t border-slate-200 dark:border-slate-800 mt-12 bg-white dark:bg-slate-900 transition-colors">
+        <footer className="py-12 border-t border-slate-200 dark:border-slate-800 mt-12 bg-white dark:bg-slate-900 transition-colors duration-300">
           <div className="max-w-7xl mx-auto px-6 text-center">
-            <p className="text-slate-400 dark:text-slate-500 text-sm font-medium">Powered by XARAXIA Architecture Core & Gemini Pro Vision</p>
+            <p className="text-slate-400 dark:text-slate-500 text-sm font-medium transition-colors duration-300">Powered by XARAXIA Architecture Core & Gemini Pro Vision</p>
             <div className="flex justify-center gap-8 mt-6">
               {['Corporate', 'Vibrant', 'Minimalist', 'Tech'].map(theme => (
                 <div key={theme} className="flex items-center gap-2 opacity-30 hover:opacity-100 transition-opacity">
-                   <div className="w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-700"></div>
-                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400">{theme}</span>
+                   <div className="w-3 h-3 rounded-full bg-slate-300 dark:bg-slate-600 transition-colors duration-300"></div>
+                   <span className="text-xs font-bold uppercase tracking-wider text-slate-500 dark:text-slate-400 transition-colors duration-300">{theme}</span>
                 </div>
               ))}
             </div>
